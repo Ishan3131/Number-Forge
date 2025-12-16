@@ -8,4 +8,4 @@ User is on a mission to build mathematical statements just by using drawn number
 
 # How to play
 - clone it on your machine
-- execute 'python main.py' on your terminal
+- execute 'python<version> <path/to/dir>/main.py' on your terminal
