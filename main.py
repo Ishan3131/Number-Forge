@@ -29,7 +29,11 @@ def sprt(st):
 
 def check(st,cards):
     '''This function checks wether the statement is vlaid or not'''
-    if eval(st) and ('//' not in st) and ('!=' not in st) : # if statement is not valid it returns false.
+    try:
+        evaluated = eval(st)
+    except:
+        return False
+    if evaluated and ('//' not in st) and ('!=' not in st) : # if statement is not valid it returns false.
         nums = sprt(st)
         if sorted(cards) == sorted(nums) :
             return int(eval(st.split('==')[1]))  # if statement is valid it returns the value of the statement , eg : (2**3==8) it returns 8.
@@ -205,3 +209,4 @@ while True :
         feedBack = input('\n\nHow was the game : ')
         break
     spnFdng -= 1
+
